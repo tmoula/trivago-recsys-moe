@@ -3,3 +3,5 @@
 *.csv
 *.zip
 __pycache__/
+*.pkl
+*.pt
