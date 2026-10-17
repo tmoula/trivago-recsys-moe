@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "trivago-moe"
 version = "0.1.0"
+license = { text = "MIT" }
 description = "Persona-conditioned mixture-of-experts for cross-domain (retail -> travel) session recommendation"
 readme = "README.md"
 requires-python = ">=3.10"

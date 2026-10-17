@@ -107,3 +107,7 @@ These come from reading the prototype. Please read them before you build on the 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). The Known issues above are good first contributions.
+
+## License
+
+Code is MIT licensed (see [LICENSE](LICENSE)). The datasets keep their own terms: the Trivago RecSys 2019 and Yoochoose data are released for research use, so check their licenses before any commercial use.
