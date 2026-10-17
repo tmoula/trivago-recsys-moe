@@ -1,7 +1,18 @@
+# Large files never go in git: datasets live in data/, weights in artifacts/
+# (fetch them with scripts/download_data.sh and scripts/download_weights.py).
+data/
+artifacts/
 *.npy
 *.dat
 *.csv
 *.zip
-__pycache__/
 *.pkl
 *.pt
+*.pth
+*.safetensors
+
+__pycache__/
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+.DS_Store
