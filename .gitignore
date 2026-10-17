@@ -1,0 +1,5 @@
+*.npy
+*.dat
+*.csv
+*.zip
+__pycache__/
