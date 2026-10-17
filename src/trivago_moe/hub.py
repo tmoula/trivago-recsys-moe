@@ -16,17 +16,21 @@ PUBLISHED_FILES = [
     "mappings.pkl",                # action/ref <-> id mappings for the checkpoint above
     "sasrec_source_encoder.pt",    # Phase 1 retail encoder (Yoochoose)
     "archetypes.json",             # 7 behavioural archetypes
-    "archetype_embeddings_v2.npy", # BGE embeddings of archetype descriptions
+    "archetype_embeddings_v2.npy", # BGE embeddings of archetype descriptions (not yet published)
     "persona_P_vectors.npy",       # [50000, 7] persona mixtures
 ]
 
 
 def download(filenames=None, repo_id: str = HF_REPO_ID, local_dir: Path = paths.ARTIFACTS_DIR) -> Path:
     from huggingface_hub import hf_hub_download
+    from huggingface_hub.errors import EntryNotFoundError
 
     local_dir.mkdir(parents=True, exist_ok=True)
     for name in filenames or PUBLISHED_FILES:
-        hf_hub_download(repo_id=repo_id, filename=name, local_dir=local_dir)
+        try:
+            hf_hub_download(repo_id=repo_id, filename=name, local_dir=local_dir)
+        except EntryNotFoundError:
+            print(f"skip (not on the Hub): {name}")
     return local_dir
 
 
