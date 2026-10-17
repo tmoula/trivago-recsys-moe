@@ -16,7 +16,7 @@ PUBLISHED_FILES = [
     "mappings.pkl",                # action/ref <-> id mappings for the checkpoint above
     "sasrec_source_encoder.pt",    # Phase 1 retail encoder (Yoochoose)
     "archetypes.json",             # 7 behavioural archetypes
-    "archetype_embeddings_v2.npy", # BGE embeddings of archetype descriptions (not yet published)
+    "archetype_embeddings_v2.npy", # BGE embeddings of archetype descriptions
     "persona_P_vectors.npy",       # [50000, 7] persona mixtures
 ]
 
