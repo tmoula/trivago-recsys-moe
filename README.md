@@ -1,6 +1,6 @@
 # trivago-recsys-moe
 
-Session-based hotel recommendation on the [Trivago RecSys Challenge 2019](https://recsys.trivago.cloud/challenge/dataset/) data, with an experimental **persona-conditioned mixture-of-experts (MoE) bridge** that transfers retail browsing behaviour (Yoochoose, RecSys 2015) into the travel domain.
+Session-based hotel recommendation on the [Trivago RecSys Challenge 2019](https://recsys.acm.org/recsys19/challenge/) data ([Kaggle mirror](https://www.kaggle.com/datasets/pranavmahajan725/trivagorecsyschallengedata2019)), with an experimental **persona-conditioned mixture-of-experts (MoE) bridge** that transfers retail browsing behaviour ([Yoochoose, RecSys Challenge 2015](https://recsys.acm.org/recsys15/challenge/); [Kaggle mirror](https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015)) into the travel domain.
 
 Built as the Polanyi Labs prototype. The original Colab notebook is in [`notebooks/`](notebooks/polanyilabs_prototype.ipynb). Its logic is factored into an installable package (`src/trivago_moe`) and runnable scripts.
 
@@ -65,8 +65,8 @@ GitHub rejects files over 100 MB, and Git LFS only gives 1 GB of free storage an
 
 | File | Size | Where it comes from |
 |---|---|---|
-| `train.csv`, `test.csv`, `item_metadata.csv` | ~780 MB zipped | Kaggle: `scripts/download_data.sh trivago` |
-| `yoochoose-clicks.dat` | ~1.5 GB | Kaggle: `scripts/download_data.sh yoochoose` |
+| `train.csv`, `test.csv`, `item_metadata.csv` | ~780 MB zipped | [Kaggle](https://www.kaggle.com/datasets/pranavmahajan725/trivagorecsyschallengedata2019): `scripts/download_data.sh trivago` |
+| `yoochoose-clicks.dat` | ~1.5 GB | [Kaggle](https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015): `scripts/download_data.sh yoochoose` |
 | `context_sasrec_best.pt` | ~413 MB | Hugging Face Hub: `scripts/download_weights.py` |
 | `sasrec_source_encoder.pt` | ~67 MB | Hugging Face Hub |
 | `mappings.pkl`, `archetypes.json`, `archetype_embeddings_v2.npy`, `persona_P_vectors.npy` | < 50 MB each | Hugging Face Hub |
